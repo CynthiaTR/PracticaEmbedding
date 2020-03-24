@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        function initializeViz() {
+        // JS object that points at empty div in the html
+        var placeholderDiv = document.getElementById("tableauViz");
+        // URL of the viz to be embedded
+        var url = "http://public.tableau.com/views/WorldIndicators/GDPpercapita";
+        // An object that contains options specifying how to embed the viz
+        var options = {
+            width: '600px',
+            height: '600px',
+            hideTabs: true,
+            hideToolbar: true,
+        };
+        viz = new tableau.Viz(placeholderDiv, url, options);
+        }
+    </script>
+</head>
+<body class="bg-gray-300 " onload="initializeViz(); ">
+    <nav class="bg-gray-900 w-full h-8">
+        <p class="text-white ml-64 text-xl">Ejemplo Practica</p>
+    </nav>
+    <div class="ml-24 mt-1 border-4 border-double h-full inline-flex">              
+        <div id="tableauViz" >
+            <div class="bg-gray-800 h-3 text-white"> Llamado desde servidor de Tableau</div>
+            <p class="text-gray-800 bg-gray-800 h-3">hola</p>
+        </div>  
+    </div>
+            <div class="bg-white inline-flex h-full ml-10 rounded">
+                <p class="text-gray-900 text-2xl">
+                    Ejemplo del uso de la ayuda visual de Tableau
+                </p>
+                
+            </div>
+</body>
+
+</html>
